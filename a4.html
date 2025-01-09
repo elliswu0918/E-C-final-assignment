@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>111570007吳賢政期末作業</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600%7CTeko:300,400,500%7CMaven+Pro:500">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      /* 春聯樣式 */
+      .spring-text {
+        background-color: red; /* 背景紅色 */
+        color: black; /* 文字顏色黑色 */
+        font-weight: bold; /* 粗體字 */
+        font-size: 3rem; /* 字體更大 */
+        display: flex;
+        align-items: center; /* 垂直居中 */
+        justify-content: center; /* 水平居中 */
+        height: 100%; /* 填滿畫布高度 */
+        width: 100%; /* 填滿畫布寬度 */
+        margin: 0; /* 移除默認外距 */
+      }
+  
+      /* 垂直文字樣式（上聯和下聯） */
+      .spring-text.vertical {
+        writing-mode: vertical-rl; /* 文字垂直排列 */
+        text-orientation: upright; /* 文字方向直立 */
+        height: 100%; /* 填滿高度 */
+        width: 100%; /* 寬度更大 */
+        display: flex;
+        align-items: center; /* 垂直居中 */
+        justify-content: center; /* 水平居中 */
+      }
+  
+      /* 水平文字樣式（橫批） */
+      .spring-text.horizontal {
+        width: 100%; /* 填滿寬度 */
+        height: 100%; /* 填滿高度 */
+        display: flex;
+        align-items: center; /* 垂直居中 */
+        justify-content: center; /* 水平居中 */
+      }
+    </style>
+  
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <!-- Page Header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="images/logo-default-191x52.png" alt="" width="191" height="52"/></a></div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <!-- RD Navbar Search-->
+                    <div class="rd-navbar-search">
+                      <button class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
+                      <form class="rd-search" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
+                        <div class="form-wrap">
+                          <label class="form-label" for="rd-navbar-search-form-input">Search...</label>
+                          <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off"/>
+                          <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                        </div>
+                        <button class="rd-search-form-submit fl-bigmug-line-search74" type="submit"></button>
+                      </form>
+                    </div>
+                    <!-- RD Navbar Share-->
+                    <div class="rd-navbar-share">
+                      <div class="rd-navbar-share-icon fl-bigmug-line-share27" data-rd-navbar-toggle=".rd-navbar-share-list"></div>
+                      <ul class="list-inline rd-navbar-share-list">
+                        <li class="rd-navbar-share-list-item"><a class="icon fa fa-facebook" href="#"></a></li>
+                        <li class="rd-navbar-share-list-item"><a class="icon fa fa-twitter" href="#"></a></li>
+                        <li class="rd-navbar-share-list-item"><a class="icon fa fa-google-plus" href="#"></a></li>
+                        <li class="rd-navbar-share-list-item"><a class="icon fa fa-instagram" href="#"></a></li>
+                      </ul>
+                    </div>
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item active">
+                        <a class="rd-nav-link" href="index.html">首頁</a>
+                      </li>
+                      <li class="rd-nav-item">
+                        <a class="rd-nav-link" href="#">SEO</a>
+                        <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item">
+                            <a class="rd-dropdown-link" href="a1.html">第一題(原始文案)</a>
+                          </li>
+                          <li class="rd-dropdown-item">
+                            <a class="rd-dropdown-link" href="a2.html">第二題(關鍵字SEO)</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item">
+                        <a class="rd-nav-link" href="#">RWD元件</a>
+                        <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item">
+                            <a class="rd-dropdown-link" href="a3.html">第三題(Carousel圖片輪放)</a>
+                          </li>
+                          <li class="rd-dropdown-item">
+                            <a class="rd-dropdown-link" href="a4.html">第四題(Offcanvas畫布)</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item">
+                        <a class="rd-nav-link" href="#">網頁元件</a>
+                        <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item">
+                            <a class="rd-dropdown-link" href="a5.html">第五題(單選複選)</a>
+                          </li>
+                          <li class="rd-dropdown-item">
+                            <a class="rd-dropdown-link" href="a6.html">第六題(下拉選單)</a>
+                          </li>
+                          <li class="rd-dropdown-item">
+                            <a class="rd-dropdown-link" href="a7.html">第七題(百萬抽獎)</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item">
+                        <a class="rd-nav-link" href="a8.html">複習ECommerce</a>
+                      </li>
+                    </ul>
+                        <!-- RD Navbar Dropdown-->
+                      </li>
+                    
+                        <!-- RD Navbar Megamenu-->
+                        <ul class="rd-menu rd-navbar-megamenu">
+                          <li class="rd-megamenu-item">
+                            <div>
+                              <h5 class="rd-megamenu-title">Elements</h5>
+                              <ul class="rd-megamenu-list">
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="icons-with-text.html">Icons with Text</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="counters.html">Counters</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="calls-to-action.html">Calls to Action</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="progress-bars.html">Progress Bars</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-and-accordions.html">Tabs and Accordions</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="hover-effects.html">Hover Effects</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid-system.html">Grid System</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="rd-megamenu-item">
+                            <div>
+                              <h5 class="rd-megamenu-title">Additional pages</h5>
+                              <ul class="rd-megamenu-list">
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="services.html">Services</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="services-2.html">Services 2</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="single-service.html">Single Service</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="our-team.html">Our Team</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="testimonials.html">Testimonials</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404-page.html">404 Page</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="503-page.html">503 Page</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="pricing.html">Pricing</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="contact-us-2.html">Contact Us 2</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="faq.html">FAQ</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search results</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="rd-megamenu-item rd-megamenu-carousel">
+                            <div>
+                              <h5 class="rd-megamenu-title">Recent projects</h5>
+                              <!-- Owl Carousel-->
+                              <div class="owl-carousel owl-navbar" data-items="1" data-xl-items="2" data-xxl-items="3" data-margin="16" data-dots="true" data-autoplay="false" data-loop="false">
+                                <!-- Thumbnail Classic-->
+                                <article class="thumbnail thumbnail-mary thumbnail-xxs">
+                                  <div class="thumbnail-mary-figure"><img src="images/navbar-1-272x288.jpg" alt="" width="272" height="288"/>
+                                  </div>
+                                  <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-1-1200x800-original.jpg" data-lightgallery="item"><img src="images/navbar-1-272x288.jpg" alt="" width="272" height="288"/></a>
+                                    <h6 class="thumbnail-mary-title"><a href="#">Project #1</a></h6>
+                                  </div>
+                                </article>
+                                <!-- Thumbnail Classic-->
+                                <article class="thumbnail thumbnail-mary thumbnail-xxs">
+                                  <div class="thumbnail-mary-figure"><img src="images/navbar-2-272x288.jpg" alt="" width="272" height="288"/>
+                                  </div>
+                                  <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/navbar-2-272x288.jpg" alt="" width="272" height="288"/></a>
+                                    <h6 class="thumbnail-mary-title"><a href="#">Project #2</a></h6>
+                                  </div>
+                                </article>
+                                <!-- Thumbnail Classic-->
+                                <article class="thumbnail thumbnail-mary thumbnail-xxs">
+                                  <div class="thumbnail-mary-figure"><img src="images/navbar-3-272x288.jpg" alt="" width="272" height="288"/>
+                                  </div>
+                                  <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-4-1200x800-original.jpg" data-lightgallery="item"><img src="images/navbar-3-272x288.jpg" alt="" width="272" height="288"/></a>
+                                    <h6 class="thumbnail-mary-title"><a href="#">Project #3</a></h6>
+                                  </div>
+                                </article>
+                                <!-- Thumbnail Classic-->
+                                <article class="thumbnail thumbnail-mary thumbnail-xxs">
+                                  <div class="thumbnail-mary-figure"><img src="images/navbar-4-272x288.jpg" alt="" width="272" height="288"/>
+                                  </div>
+                                  <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-3-1200x800-original.jpg" data-lightgallery="item"><img src="images/navbar-4-272x288.jpg" alt="" width="272" height="288"/></a>
+                                    <h6 class="thumbnail-mary-title"><a href="#">Project #4</a></h6>
+                                  </div>
+                                </article>
+                                <!-- Thumbnail Classic-->
+                                <article class="thumbnail thumbnail-mary thumbnail-xxs">
+                                  <div class="thumbnail-mary-figure"><img src="images/navbar-5-272x288.jpg" alt="" width="272" height="288"/>
+                                  </div>
+                                  <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-5-1200x800-original.jpg" data-lightgallery="item"><img src="images/navbar-5-272x288.jpg" alt="" width="272" height="288"/></a>
+                                    <h6 class="thumbnail-mary-title"><a href="#">Project #5</a></h6>
+                                  </div>
+                                </article>
+                                <!-- Thumbnail Classic-->
+                                <article class="thumbnail thumbnail-mary thumbnail-xxs">
+                                  <div class="thumbnail-mary-figure"><img src="images/navbar-6-272x288.jpg" alt="" width="272" height="288"/>
+                                  </div>
+                                  <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-6-1200x800-original.jpg" data-lightgallery="item"><img src="images/navbar-6-272x288.jpg" alt="" width="272" height="288"/></a>
+                                    <h6 class="thumbnail-mary-title"><a href="#">Project #6</a></h6>
+                                  </div>
+                                </article>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Swiper-->
+      <section class="section swiper-container swiper-slider swiper-slider-classic" data-loop="true" data-swiper='{"loop":true,"autoplay":{"delay":5000},"effect":"slide","simulateTouch":true,"direction":"vertical","nav":false}'>
+        <div class="swiper-wrapper text-center">
+          <div class="swiper-slide" data-slide-bg="images/slider-1-slide-1-1770x742.jpg">
+            <div class="swiper-slide-caption section-md">
+              <div class="container">
+                <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">北科大經管系</h1>
+                <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100">Since our establishment, we have been delivering high-quality and sustainable software solutions for corporate purposes of worldwide businesses.</p><a class="button button-primary button-ujarak" href="#" target="_blank" data-caption-animate="fadeInUp" data-caption-delay="200">Get in touch</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-slide-bg="images/slider-1-slide-2-1770x742.jpg">
+            <div class="swiper-slide-caption section-md">
+              <div class="container">
+                <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">電子商務期末考</h1>
+                <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100">We are a team of qualified software developers, aimed at creating unique and powerful tools for your business & everyday life.</p><a class="button button-primary button-ujarak" href="#" target="_blank" data-caption-animate="fadeInUp" data-caption-delay="200">Get in touch</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-slide-bg="images/slider-1-slide-3-1770x742.jpg">
+            <div class="swiper-slide-caption section-md">
+              <div class="container">
+                <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">SEO實作，RWD實作</h1>
+                <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100">The software solutions developed by our company have been numerously awarded for usability and innovative features.</p><a class="button button-primary button-ujarak" href="#" target="_blank" data-caption-animate="fadeInUp" data-caption-delay="200">Get in touch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Swiper Pagination-->
+        <div class="swiper-pagination__module">
+          <div class="swiper-pagination__fraction"><span class="swiper-pagination__fraction-index">00</span><span class="swiper-pagination__fraction-divider">/</span><span class="swiper-pagination__fraction-count">00</span></div>
+          <div class="swiper-pagination__divider"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+          <!-- 期末考放置語法區-->
+    <section class="section section-sm section-first bg-default text-center">
+      <div class="container">
+        <div class="row row-30 justify-content-center">
+      
+          <hr>
+          <h4>
+         
+            <div class="container my-5 text-center">
+              <!-- 按鈕 -->
+              <button class="btn btn-primary m-2 w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                橫批
+              </button>
+              <button class="btn btn-primary m-2 w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">
+                下聯
+              </button>
+              <button class="btn btn-primary m-2 w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                上聯
+              </button>
+            </div>
+            
+            
+          
+            <!-- 橫批 -->
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+              <div class="offcanvas-header">
+                <h5 id="offcanvasTopLabel">橫批</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="spring-text horizontal">
+                  吉星高照
+                </div>
+              </div>
+            </div>
+          
+            <!-- 下聯 -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+              <div class="offcanvas-header">
+                <h5 id="offcanvasLeftLabel">下聯</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="spring-text vertical">
+                  春滿乾坤福滿門
+                </div>
+              </div>
+            </div>
+          
+            <!-- 上聯 -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+              <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">上聯</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="spring-text vertical">
+                  天增歲月人增壽
+                </div>
+              </div>
+            </div>
+            </h4>
+
+      <!-- See all services-->
+      <section class="section section-sm section-first bg-default text-center">
+        <div class="container">
+          <div class="row row-30 justify-content-center">
+            <div class="col-md-7 col-lg-5 col-xl-6 text-lg-start wow fadeInUp"><img src="images/index-1-415x592.jpg" alt="" width="415" height="592"/>
+            </div>
+            <div class="col-lg-7 col-xl-6">
+              <div class="row row-30">
+                <div class="col-sm-6 wow fadeInRight">
+                  <article class="box-icon-modern box-icon-modern-custom">
+                    <div>
+                      <h3 class="box-icon-modern-big-title">See all services</h3>
+                      <div class="box-icon-modern-decor"></div><a class="button button-primary button-ujarak" href="services.html">All services</a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-sm-6 wow fadeInRight" data-wow-delay=".1s">
+                  <article class="box-icon-modern box-icon-modern-2">
+                    <div class="box-icon-modern-icon linearicons-phone-in-out"></div>
+                    <h5 class="box-icon-modern-title"><a href="single-service.html">CORPORATE SOLUTIONS</a></h5>
+                    <div class="box-icon-modern-decor"></div>
+                    <p class="box-icon-modern-text">Need specific software for your company? We are ready to develop it!</p>
+                  </article>
+                </div>
+                <div class="col-sm-6 wow fadeInRight" data-wow-delay=".2s">
+                  <article class="box-icon-modern box-icon-modern-2">
+                    <div class="box-icon-modern-icon linearicons-headset"></div>
+                    <h5 class="box-icon-modern-title"><a href="single-service.html">CALL CENTER SOLUTIONS</a></h5>
+                    <div class="box-icon-modern-decor"></div>
+                    <p class="box-icon-modern-text">Our experts provide custom products of any complexity for call centers.</p>
+                  </article>
+                </div>
+                <div class="col-sm-6 wow fadeInRight" data-wow-delay=".3s">
+                  <article class="box-icon-modern box-icon-modern-2">
+                    <div class="box-icon-modern-icon linearicons-outbox"></div>
+                    <h5 class="box-icon-modern-title"><a href="single-service.html">CLOUD DEVELOPMENT</a></h5>
+                    <div class="box-icon-modern-decor"></div>
+                    <p class="box-icon-modern-text">We can also offer you reliable cloud development solutions.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Projects-->
+      <section class="section section-sm section-fluid bg-default text-center">
+        <div class="container-fluid isotope-wrap">
+          <h2 class="wow fadeInLeft">Latest Projects</h2>
+          <p class="quote-jean wow fadeInRight" data-wow-delay=".1s">In our portfolio, you can browse the latest products developed for our clients for different corporate purposes. Our qualified team of interface designers and software developers is always ready to create something unique for you.</p>
+          <div class="isotope-filters isotope-filters-horizontal">
+            <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha" data-custom-toggle="#isotope-3" data-custom-toggle-hide-on-blur="true" data-custom-toggle-disable-on-blur="true"><span class="icon fa fa-caret-down"></span>Filter</button>
+            <ul class="isotope-filters-list" id="isotope-3">
+              <li><a class="active" href="#" data-isotope-filter="*" data-isotope-group="gallery">All</a></li>
+              <li><a href="#" data-isotope-filter="Type 1" data-isotope-group="gallery">mobile Apps</a></li>
+              <li><a href="#" data-isotope-filter="Type 2" data-isotope-group="gallery">Custom Software</a></li>
+              <li><a href="#" data-isotope-filter="Type 3" data-isotope-group="gallery">QA & Testing</a></li>
+              <li><a href="#" data-isotope-filter="Type 4" data-isotope-group="gallery">UX and Design</a></li>
+            </ul>
+          </div>
+          <div class="row row-30 isotope" data-isotope-layout="fitRows" data-isotope-group="gallery" data-lightgallery="group">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInLeft" data-filter="Type 3">
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/fullwidth-gallery-1-420x350.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-1-1200x800-original.jpg" data-lightgallery="item"><img src="images/fullwidth-gallery-1-420x350.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title"><a href="#">FinStep</a></h5>
+                  </div>
+                  <p class="thumbnail-classic-text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInLeft" data-filter="Type 1" data-wow-delay=".1s">
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/fullwidth-gallery-2-420x350.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/fullwidth-gallery-2-420x350.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title"><a href="#">Mobile Finance</a></h5>
+                  </div>
+                  <p class="thumbnail-classic-text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInLeft" data-filter="Type 2" data-wow-delay=".2s">
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/fullwidth-gallery-3-420x350.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-3-1200x800-original.jpg" data-lightgallery="item"><img src="images/fullwidth-gallery-3-420x350.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title"><a href="#">Q-Manage</a></h5>
+                  </div>
+                  <p class="thumbnail-classic-text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInLeft" data-filter="Type 3" data-wow-delay=".3s">
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/fullwidth-gallery-4-420x350.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-4-1200x800-original.jpg" data-lightgallery="item"><img src="images/fullwidth-gallery-4-420x350.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title"><a href="#">WeatherCast</a></h5>
+                  </div>
+                  <p class="thumbnail-classic-text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4">
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/fullwidth-gallery-5-420x350.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-5-1200x800-original.jpg" data-lightgallery="item"><img src="images/fullwidth-gallery-5-420x350.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title"><a href="#">Home Calendar</a></h5>
+                  </div>
+                  <p class="thumbnail-classic-text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/fullwidth-gallery-6-420x350.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-6-1200x800-original.jpg" data-lightgallery="item"><img src="images/fullwidth-gallery-6-420x350.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title"><a href="#">MPlanner</a></h5>
+                  </div>
+                  <p class="thumbnail-classic-text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/fullwidth-gallery-7-420x350.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-7-1200x800-original.jpg" data-lightgallery="item"><img src="images/fullwidth-gallery-7-420x350.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title"><a href="#">Alice Messenger</a></h5>
+                  </div>
+                  <p class="thumbnail-classic-text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/fullwidth-gallery-8-420x350.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/grid-gallery-8-1200x800-original.jpg" data-lightgallery="item"><img src="images/fullwidth-gallery-8-420x350.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title"><a href="#">WiseMoney</a></h5>
+                  </div>
+                  <p class="thumbnail-classic-text">We work hard on every app to deliver top-notch features with great UI that you won’t find anywhere else.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Years of experience-->
+      <section class="section section-sm bg-default">
+        <div class="container">
+          <div class="row row-30 row-xl-24 justify-content-center align-items-center align-items-lg-start text-start">
+            <div class="col-md-6 col-lg-5 col-xl-5 text-center"><a class="text-img" href="about-us.html">
+                <div id="particles-js"></div><span class="counter">10</span></a></div>
+            <div class="col-sm-8 col-md-6 col-lg-5 col-xl-3">
+              <div class="text-width-extra-small offset-top-lg-24 wow fadeInUp">
+                <h3 class="title-decoration-lines-left">Years of Experience</h3>
+                <p class="text-gray-500">DreamSoft is a team of highly experienced app designers and developers creating unique software for you.</p><a class="button button-secondary button-pipaluk" href="#" target="_blank">Get in touch</a>
+              </div>
+            </div>
+            <div class="col-sm-10 col-md-8 col-lg-6 col-xl-4 wow fadeInRight" data-wow-delay=".1s">
+              <div class="row justify-content-center border-2-column offset-top-xl-26">
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter">2</span><span class="symbol">k</span>
+                    </div>
+                    <h6 class="counter-amy-title">apps developed</h6>
+                  </div>
+                </div>
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter">40</span>
+                    </div>
+                    <h6 class="counter-amy-title">Consultants</h6>
+                  </div>
+                </div>
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter">12</span>
+                    </div>
+                    <h6 class="counter-amy-title">Awards won</h6>
+                  </div>
+                </div>
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter">160</span>
+                    </div>
+                    <h6 class="counter-amy-title">Employees</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-xl-12 align-self-center">
+              <div class="row row-30 justify-content-center">
+                <div class="col-sm-6 col-md-5 col-lg-6 col-xl-3 wow fadeInLeft"><a class="clients-classic" href="#"><img src="images/clients-9-270x117.png" alt="" width="270" height="117"/></a></div>
+                <div class="col-sm-6 col-md-5 col-lg-6 col-xl-3 wow fadeInLeft" data-wow-delay=".1s"><a class="clients-classic" href="#"><img src="images/clients-10-270x117.png" alt="" width="270" height="117"/></a></div>
+                <div class="col-sm-6 col-md-5 col-lg-6 col-xl-3 wow fadeInLeft" data-wow-delay=".2s"><a class="clients-classic" href="#"><img src="images/clients-3-270x117.png" alt="" width="270" height="117"/></a></div>
+                <div class="col-sm-6 col-md-5 col-lg-6 col-xl-3 wow fadeInLeft" data-wow-delay=".3s"><a class="clients-classic" href="#"><img src="images/clients-11-270x117.png" alt="" width="270" height="117"/></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Years of experience-->
+      <section class="section section-sm section-fluid bg-default">
+        <div class="container-fluid">
+          <h2>Meet The Team</h2>
+          <div class="row row-sm row-30 justify-content-center">
+            <div class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a class="team-classic-figure" href="#"><img src="images/team-11-420x424.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="#">Ryan Wilson</a></h4>
+                  <p class="team-classic-status">Director of Production</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight" data-wow-delay=".1s">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a class="team-classic-figure" href="#"><img src="images/team-12-420x424.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="#">Jill Peterson</a></h4>
+                  <p class="team-classic-status">UI Designer</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight" data-wow-delay=".2s">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a class="team-classic-figure" href="#"><img src="images/team-13-420x424.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="#">Sam Robinson</a></h4>
+                  <p class="team-classic-status">Senior Developer</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight" data-wow-delay=".3s">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a class="team-classic-figure" href="#"><img src="images/team-14-420x424.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="#">Mary Lee</a></h4>
+                  <p class="team-classic-status">Software Developer</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- You dream — we embody-->
+      <section class="section section-sm bg-default text-md-start">
+        <div class="container">
+          <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+            <div class="col-lg-6 col-xl-5 wow fadeInLeft">
+              <h2>Get More With Us</h2>
+              <!-- Bootstrap tabs-->
+              <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-start" id="tabs-6">
+                <!-- Nav tabs-->
+                <ul class="nav nav-tabs">
+                  <li class="item" role="presentation"><a class="nav-link nav-link-big active" href="#tabs-6-1" data-bs-toggle="tab">01</a></li>
+                  <li class="item" role="presentation"><a class="nav-link nav-link-big" href="#tabs-6-2" data-bs-toggle="tab">02</a></li>
+                  <li class="item" role="presentation"><a class="nav-link nav-link-big" href="#tabs-6-3" data-bs-toggle="tab">03</a></li>
+                  <li class="item" role="presentation"><a class="nav-link nav-link-big" href="#tabs-6-4" data-bs-toggle="tab">04</a></li>
+                </ul>
+                <!-- Tab panes-->
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="tabs-6-1">
+                    <h5 class="fw-normal">FREE APPS</h5>
+                    <p>We regularly upload new free apps to our website, which is fully accessible to our clients and subscribers. You can also find out about free apps in our blog.</p>
+                    <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#" target="_blank">Get in touch</a><a class="button button-default-outline button-wapasha" href="#">Download presentation</a></div>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-6-2">
+                    <h5 class="fw-normal">GET SOCIAL</h5>
+                    <p>Every app we develop has built-in social support that allows you to stay connected to your accounts on Facebook, Instagram, Twitter and other networks.</p>
+                    <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#" target="_blank">Get in touch</a><a class="button button-default-outline button-wapasha" href="#">Download presentation</a></div>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-6-3">
+                    <h5 class="fw-normal">CUSTOMER SERVICE</h5>
+                    <p>Every customer of DreamSoft can get access to our friendly and qualified 24/7 support via chat or phone. Feel free to ask us any questions!</p>
+                    <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#" target="_blank">Get in touch</a><a class="button button-default-outline button-wapasha" href="#">Download presentation</a></div>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-6-4">
+                    <h5 class="fw-normal">GREAT USABILITY</h5>
+                    <p>All our apps are designed to have great usability in order to easily operate our applications. That is why our software has high ratings and lots of awards.</p>
+                    <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#" target="_blank">Get in touch</a><a class="button button-default-outline button-wapasha" href="#">Download presentation</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+              <div class="row row-30 align-items-center justify-content-center justify-content-xl-between">
+                <div class="col-sm-6"><img src="images/index-4-261x484.png" alt="" width="261" height="484"/>
+                </div>
+                <div class="col-sm-6"><img src="images/index-5-261x484.png" alt="" width="261" height="484"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What people Say-->
+      <section class="section section-sm section-bottom-70 section-fluid bg-default">
+        <div class="container-fluid">
+          <h2>What people Say</h2>
+          <div class="row row-50 row-sm">
+            <div class="col-md-6 col-xl-4 wow fadeInRight">
+              <!-- Quote Modern-->
+              <article class="quote-modern quote-modern-custom">
+                <div class="unit unit-spacing-md align-items-center">
+                  <div class="unit-left"><a class="quote-modern-figure" href="#"><img class="img-circles" src="images/user-11-75x75.jpg" alt="" width="75" height="75"/></a></div>
+                  <div class="unit-body">
+                    <h4 class="quote-modern-cite"><a href="#">Catherine Williams</a></h4>
+                    <p class="quote-modern-status">Regular client</p>
+                  </div>
+                </div>
+                <div class="quote-modern-text">
+                  <p class="q">DreamSoft offers a high caliber of resources skilled in Microsoft Azure .NET, mobile and Quality Assurance. They became our true business partners over the past three years.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4 wow fadeInRight" data-wow-delay=".1s">
+              <!-- Quote Modern-->
+              <article class="quote-modern quote-modern-custom">
+                <div class="unit unit-spacing-md align-items-center">
+                  <div class="unit-left"><a class="quote-modern-figure" href="#"><img class="img-circles" src="images/user-12-75x75.jpg" alt="" width="75" height="75"/></a></div>
+                  <div class="unit-body">
+                    <h4 class="quote-modern-cite"><a href="#">Rupert Wood</a></h4>
+                    <p class="quote-modern-status">Regular client</p>
+                  </div>
+                </div>
+                <div class="quote-modern-text">
+                  <p class="q">DreamSoft powered us with a competent team to develop products for banking services. The team has been delivering results within budget and time, which is amazing.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4 wow fadeInRight" data-wow-delay=".2s">
+              <!-- Quote Modern-->
+              <article class="quote-modern quote-modern-custom">
+                <div class="unit unit-spacing-md align-items-center">
+                  <div class="unit-left"><a class="quote-modern-figure" href="#"><img class="img-circles" src="images/user-20-75x75.jpg" alt="" width="75" height="75"/></a></div>
+                  <div class="unit-body">
+                    <h4 class="quote-modern-cite"><a href="#">Samantha Brown</a></h4>
+                    <p class="quote-modern-status">Regular client</p>
+                  </div>
+                </div>
+                <div class="quote-modern-text">
+                  <p class="q">DreamSoft is a highly skilled and uniquely capable firm with multitudes of talent on-board. We have collaborated on a number of diverse projects that have been a great success.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest blog posts-->
+      <section class="section section-sm section-last bg-default">
+        <div class="container">
+          <h2>Latest blog posts</h2>
+          <div class="row row-60 row-sm">
+            <div class="col-sm-6 col-lg-4 wow fadeInLeft">
+              <!-- Post Modern-->
+              <article class="post post-modern"><a class="post-modern-figure" href="blog-post.html"><img src="images/post-10-370x307.jpg" alt="" width="370" height="307"/>
+                  <div class="post-modern-time">
+                    <time datetime="2019-07-04"><span class="post-modern-time-month">07</span><span class="post-modern-time-number">04</span></time>
+                  </div></a>
+                <h4 class="post-modern-title"><a href="blog-post.html">Benefits Of Async/Await</a></h4>
+                <p class="post-modern-text">Asynchronous functions are a good and bad thing in JavaScript. The good side is that asynchronous functions are non-blocking and…</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 wow fadeInLeft" data-wow-delay=".1s">
+              <!-- Post Modern-->
+              <article class="post post-modern"><a class="post-modern-figure" href="blog-post.html"><img src="images/post-11-370x307.jpg" alt="" width="370" height="307"/>
+                  <div class="post-modern-time">
+                    <time datetime="2019-07-17"><span class="post-modern-time-month">07</span><span class="post-modern-time-number">17</span></time>
+                  </div></a>
+                <h4 class="post-modern-title"><a href="blog-post.html">Key Considerations Of iPaaS</a></h4>
+                <p class="post-modern-text">Digital transformation requires cloud appropriate adoption, legacy IT systems modernization, and Agile-based methodologies for faster…</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 wow fadeInLeft" data-wow-delay=".2s">
+              <!-- Post Modern-->
+              <article class="post post-modern"><a class="post-modern-figure" href="blog-post.html"><img src="images/post-12-370x307.jpg" alt="" width="370" height="307"/>
+                  <div class="post-modern-time">
+                    <time datetime="2019-07-22"><span class="post-modern-time-month">07</span><span class="post-modern-time-number">22</span></time>
+                  </div></a>
+                <h4 class="post-modern-title"><a href="blog-post.html">Hibernate Query Language</a></h4>
+                <p class="post-modern-text">In this tutorial, we will discuss the Hibernate Query Language. HQL is an object-oriented query language. Hibernate Query...</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page Footer-->
+      <footer class="section section-fluid footer-classic">
+        <div class="container-fluid bg-gray-15">
+          <div class="row justify-content-center row-30">
+            <div class="col-md-10 col-lg-12 col-xl-4 wow fadeInRight">
+              <div class="box-footer box-footer-small">
+                <div class="footer-brand"><a href="index.html"><img src="images/logo-inverse-191x52.png" alt="" width="191" height="52"/></a></div>
+                <p class="text-width-medium">Our company has been developing high-quality and reliable software for corporate needs since 2008. We are renowned professionals of software development.</p>
+                <div class="contact-classic">
+                  <div class="contact-classic-item">
+                    <div class="unit unit-spacing-md align-items-center">
+                      <div class="unit-left">
+                        <h6 class="contact-classic-title">Address</h6>
+                      </div>
+                      <div class="unit-body contact-classic-link"><a href="#">4730 Crystal Springs Dr, Los Angeles, CA 90027</a></div>
+                    </div>
+                  </div>
+                  <div class="contact-classic-item">
+                    <div class="unit unit-spacing-md align-items-center">
+                      <div class="unit-left">
+                        <h6 class="contact-classic-title">Phones</h6>
+                      </div>
+                      <div class="unit-body contact-classic-link"><a href="tel:#">+1 323-913-4688</a>, <a href="tel:#"> +1 323-888-4554</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact-classic-item">
+                    <div class="unit unit-spacing-md align-items-center">
+                      <div class="unit-left">
+                        <h6 class="contact-classic-title">E-mails</h6>
+                      </div>
+                      <div class="unit-body contact-classic-link"><a href="mailto:#"> info@demolink.org</a>, <a href="mailto:#"> mail@demolink.org</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="list-inline list-inline-sm footer-social-list">
+                  <li><a class="icon fa fa-facebook" href="#"></a></li>
+                  <li><a class="icon fa fa-twitter" href="#"></a></li>
+                  <li><a class="icon fa fa-google-plus" href="#"></a></li>
+                  <li><a class="icon fa fa-instagram" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-10 col-lg-6 col-xl-4 wow fadeInRight" data-wow-delay=".1s">
+              <div class="box-footer">
+                <h3 class="fw-normal">Questions? Contact Us</h3>
+                <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                  <div class="form-wrap">
+                    <input class="form-input" id="contact-name-6" type="text" name="name" data-constraints="@Required"/>
+                    <label class="form-label" for="contact-name-6">Name</label>
+                  </div>
+                  <div class="form-wrap">
+                    <input class="form-input" id="contact-email-6" type="email" name="email" data-constraints="@Email @Required"/>
+                    <label class="form-label" for="contact-email-6">E-mail</label>
+                  </div>
+                  <div class="form-wrap">
+                    <label class="form-label" for="contact-message-6">Message</label>
+                    <textarea class="form-input" id="contact-message-6" name="message" data-constraints="@Required"></textarea>
+                  </div>
+                  <button class="button button-block button-primary" type="submit">Send Message</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-10 col-lg-6 col-xl-4 wow fadeInRight" data-wow-delay=".2s">
+              <div class="box-footer">
+                <h3 class="fw-normal">What We Offer</h3>
+                <ul class="footer-list-category">
+                  <li class="heading-4"><a href="#">DB Management<span></span></a></li>
+                  <li class="heading-4"><a href="#">iOS/MacOS<span></span></a></li>
+                  <li class="heading-4"><a href="#">Android Apps<span></span></a></li>
+                  <li class="heading-4"><a href="#">Windows Apps<span></span></a></li>
+                  <li class="heading-4"><a href="#">UX & UI<span></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container footer-bottom-panel wow fadeInUp">
+          <!-- Rights-->
+          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>DreamSoft</span>. All rights reserved. <a href="privacy-policy.html"> Privacy Policy.</a> <a target="_blank" href="https://www.mobanwang.com/" title="网站模板">网站模板</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
